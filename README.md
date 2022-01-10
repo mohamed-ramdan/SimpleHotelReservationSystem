@@ -1,4 +1,4 @@
-# Arab Academy for Science and Technology and Maritime Transport
+## Arab Academy for Science and Technology and Maritime Transport
 ## College of Computing and Information Technology
 ### Simple Hotel Reservation System - OOP Lab
 Implement using Java, a simple hotel reservation system with the following 4 
