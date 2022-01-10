@@ -49,7 +49,7 @@ public class SimpleHotelReservationTester {
 			else if("2".equals(input)) {
 				
 				while(reserveActive) {
-					System.out.print("Enter the room number to reserve or type n to back to the main menu");
+					System.out.println("Enter the room number to reserve or type n to back to the main menu");
 					String roomNumToReserve = scan.nextLine();
 					if("n".equals(roomNumToReserve)) {
 						break;
@@ -81,7 +81,7 @@ public class SimpleHotelReservationTester {
 			}
 			else if ("3".equals(input)) {
 				while(displayActive) {
-					System.out.print("Enter the room number to display or type n to back to the main menu");
+					System.out.println("Enter the room number to display or type n to back to the main menu");
 					String roomNumToDisplay = scan.nextLine(); 
 					if("n".equals(roomNumToDisplay)) {
 						break;
