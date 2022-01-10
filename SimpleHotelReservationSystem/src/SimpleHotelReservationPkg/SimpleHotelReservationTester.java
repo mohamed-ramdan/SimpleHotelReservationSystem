@@ -1,5 +1,11 @@
 package SimpleHotelReservationPkg;
 import java.util.Scanner;
+/**
+ * 
+ * @author: Mohamed Ramadan
+ * 
+ * Main executor/tester class.
+ */
 public class SimpleHotelReservationTester {
 
 	public static void main(String[] args) {
@@ -15,15 +21,12 @@ public class SimpleHotelReservationTester {
 		System.out.println("======================================");
 		System.out.println("**** Welcome to " + myHotel.getHotelName() + " Hotel ****");
 		
-		
-		
-		
 		boolean active = true; 
 
-		
 		while(active) {
 			boolean reserveActive = true;
 			boolean displayActive = true;
+			
 			System.out.println("======================================");
 			System.out.println("How Can I Help You Sir: ");
 			System.out.println("------------------------------");
@@ -102,13 +105,13 @@ public class SimpleHotelReservationTester {
 				break;
 			}
 		}
-		
-		
-
 	}
 
-	// Rooms Creator helper function.
-	// Creates statically 10 rooms the first 5 rooms single and the others double.
+	/**
+	 *  Rooms Creator helper function.
+	 *  Creates statically 10 rooms the first 5 rooms single and the others double.
+	 * @return Array of Room objects.
+	 */
 	private static Room [] createRooms() {
 		Room [] rooms = new Room[10];  
 		for (int i=0;i<10;i++) {
@@ -123,9 +126,13 @@ public class SimpleHotelReservationTester {
 		return rooms;
 	}
 	
-	
-	// Hotel Creator helper function
-	// creates hotel using given name and rooms list of rooms helper creator.
+ 
+	/**
+	 * Hotel Creator helper function, creates hotel using given name and rooms list of rooms helper creator.
+	 * @param hotelName String 
+	 * @param rooms List of Room objects
+	 * @return Hotel object
+	 */
 	private static Hotel createHotel(String hotelName, Room[] rooms) {
 		Hotel hotel = new Hotel(hotelName, rooms);
 		return hotel;

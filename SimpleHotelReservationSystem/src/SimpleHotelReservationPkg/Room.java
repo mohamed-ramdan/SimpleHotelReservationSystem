@@ -1,12 +1,20 @@
 package SimpleHotelReservationPkg;
-
-// Abstract Class Room representing the Hotel's Rooms.
+/**
+ * 
+ * @author Mohamed Ramadan
+ * github.com/mohamed-ramdan
+ *
+ * Abstract Class Room representing the Hotel's Rooms.
+ */
 public abstract class Room {
 	// Private Attributes
 	private int roomNumber;
 	private boolean reserved;
 	
-	// Public Constructor: initializing the instance roomNumber.
+	/**
+	 * Public Constructor: initializing the instance roomNumber.
+	 * @param roomNum to init private instance variable
+	 */
 	public Room(int roomNum) {
 		this.roomNumber = roomNum;
 	}

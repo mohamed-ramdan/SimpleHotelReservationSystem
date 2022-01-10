@@ -1,10 +1,20 @@
 package SimpleHotelReservationPkg;
-
+/**
+ * 
+ * @author Mohamed Ramadan
+ * github.com/mohamed-ramdan
+ *
+ * Hotel Class representing the Hotel entity.
+ */
 public class Hotel {
 	private String hotelName;
 	private Room rooms[];
 	
-	// Public Constructor.
+	/**
+	 * Public Constructor.
+	 * @param hName String hotel name
+	 * @param hRooms Array Room objects
+	 */
 	public Hotel(String hName, Room hRooms[]) {
 		this.hotelName = hName;
 		this.rooms = hRooms;
@@ -19,9 +29,11 @@ public class Hotel {
 		return this.rooms;
 	}
 	
-	// isFull method checks if all Hotel's rooms are reserved.
-	// loops on all rooms, if one room at least is not reserved then break.
-	//@return: true if all rooms were reserved, false otherwise.
+	/**
+	 * isFull method checks if all Hotel's rooms are reserved.
+	 * loops on all rooms, if one room at least is not reserved then break.
+	 * @return Boolean true if all rooms were reserved, false otherwise. 
+	 */
 	public boolean isFull() {
 		boolean result = true;
 		for(int i=0; i< this.rooms.length;i++) {
@@ -33,9 +45,14 @@ public class Hotel {
 		return result;
 	}
 	
-	// reserveRoom method checks if a given room is not reserved to reserve.
-	// loop on all hotel rooms, check the rooms using given room number then reservation status.
-	// if not reserved , set reserved true, return false otherwise. 
+
+	/**
+	 * reserveRoom method checks if a given room is not reserved to reserve.
+	 * loop on all hotel rooms, check the rooms using given room number then reservation status.
+	 * if not reserved , set reserved true, return false otherwise. 
+	 * @param room Room object 
+	 * @return Boolean true if reserved, false otherwise.
+	 */
 	public boolean reserveRoom(Room room) {
 		boolean result = false;
 		for(int i=0; i< this.rooms.length;i++) {
