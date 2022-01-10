@@ -3,6 +3,7 @@ import java.util.Scanner;
 /**
  * 
  * @author: Mohamed Ramadan
+ * github.com/mohamed-ramdan
  * 
  * Main executor/tester class.
  */
