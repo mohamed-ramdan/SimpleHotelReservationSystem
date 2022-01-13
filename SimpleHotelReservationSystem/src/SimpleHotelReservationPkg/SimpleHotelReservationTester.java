@@ -1,14 +1,18 @@
 package SimpleHotelReservationPkg;
 import java.util.Scanner;
 /**
+ * @author mohamed-ramdan
  * 
- * @author: Mohamed Ramadan
  * github.com/mohamed-ramdan
  * 
  * Main executor/tester class.
  */
 public class SimpleHotelReservationTester {
 
+	/**
+	 * Main method 
+	 * @param args arguments
+	 */
 	public static void main(String[] args) {
 		
 		// Test the Simple Hotel Reservation System.

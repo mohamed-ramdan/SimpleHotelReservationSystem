@@ -21,10 +21,18 @@ public class Hotel {
 	}
 
 	// Public Accessors.
+	/**
+	 * Hotel name getter
+	 * @return String hotel name
+	 */
 	public String getHotelName() {
 		return this.hotelName;
 	}
 	
+	/**
+	 * Hotel Rooms Getter
+	 * @return List of Hotel Rooms
+	 */
 	public Room [] getHotelRooms() {
 		return this.rooms;
 	}
