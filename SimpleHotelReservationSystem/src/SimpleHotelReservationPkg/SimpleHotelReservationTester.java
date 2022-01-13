@@ -16,17 +16,14 @@ public class SimpleHotelReservationTester {
 		Room [] rooms = createRooms();
 		Hotel myHotel = createHotel("Four Season", rooms);
 		
-		//Logging
-		Scanner scan = new Scanner(System.in);
+		// Logging & scanning 
+		final Scanner scan = new Scanner(System.in);
 		
 		System.out.println("======================================");
 		System.out.println("**** Welcome to " + myHotel.getHotelName() + " Hotel ****");
 		
-		boolean active = true; 
 
-		while(active) {
-			boolean reserveActive = true;
-			boolean displayActive = true;
+		while(true) {
 			
 			System.out.println("======================================");
 			System.out.println("How Can I Help You Sir: ");
@@ -48,7 +45,7 @@ public class SimpleHotelReservationTester {
 			}
 			else if("2".equals(input)) {
 				
-				while(reserveActive) {
+				while(true) {
 					System.out.println("Enter the room number to reserve or type n to back to the main menu");
 					String roomNumToReserve = scan.nextLine();
 					if("n".equals(roomNumToReserve)) {
@@ -72,7 +69,7 @@ public class SimpleHotelReservationTester {
 							myHotel.reserveRoom(desiredRoom);
 							System.out.println("Room Number: " + desiredRoom.getRoomNumber() + " Reserved Successfully under the price of: " + desiredRoom.getPrice());
 							System.out.println("---------------------------------------------");
-							reserveActive = false;
+							break;
 						}
 					}
 						
@@ -80,7 +77,7 @@ public class SimpleHotelReservationTester {
 				
 			}
 			else if ("3".equals(input)) {
-				while(displayActive) {
+				while(true) {
 					System.out.println("Enter the room number to display or type n to back to the main menu");
 					String roomNumToDisplay = scan.nextLine(); 
 					if("n".equals(roomNumToDisplay)) {
@@ -102,8 +99,10 @@ public class SimpleHotelReservationTester {
 			}
 			else if("0".equals(input)) {
 				System.out.println("Good bye ...");
-				active = false;
 				break;
+			}
+			else {
+				System.out.println("Wrong choice !!!");
 			}
 		}
 	}
